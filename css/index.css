@@ -1,0 +1,821 @@
+*{
+            font-family: Microsoft YaHei;
+
+        }
+           #afui .list > li > a:after{
+            content: "";
+           }
+           #afui .login{
+            background-color: #fff;
+            width: 100%;
+            display: block;
+            border: 1px solid #CCC;
+            color:black;
+            text-align: center;
+            border-radius: 6px;
+            margin-top: 10px;  
+            padding: 10px 80px 10px 80px;
+            text-decoration: none;
+            float: left;
+            
+
+           }
+           .afPopup > HEADER{
+            background: url(../images/background.jpg) no-repeat;
+            color: #fff;
+
+           }
+           #afui .F_password{
+            background-color: #fff;
+            display: block;
+            width: 50%;
+            border: 1px solid #CCC;
+            border-right:none;
+            color:black;
+            text-align: center;
+            border-radius: 6px 0px 0px 6px; 
+            margin: 10px 0px 0px 0px; 
+            padding: 10px 0px;
+            text-decoration: none;
+            float: left;
+
+           }
+
+            #afui .register{
+            background-color: #fff;
+            display: block;
+            width: 50%;
+
+            border: 1px solid #CCC;
+            color:black;
+            text-align: center;
+            border-radius:0px 6px 6px 0px;  
+            margin-top:10px;
+            padding: 10px 0px;
+            text-decoration: none;
+            float: left;
+           }
+
+           #afui.myandroid #backButton{
+            position: absolute;
+            background-color: red;
+            top:10px;
+           }
+           
+           #afui .login_w  input{
+            border:0;
+            border-radius: 0px;
+            border-bottom: 1px solid #ccc;
+            margin-top: 3px;
+           }
+           #afui .register_w  input{
+            border:0;
+            border-radius: 0px;
+            border-bottom: 1px solid #ccc;
+            margin-top: 3px;
+           }
+           #afui .b_register{
+             background-color: #fff;
+            width: 100%;
+            display: block;
+            border: 1px solid #CCC;
+            color:black;
+            text-align: center;
+            border-radius: 6px;
+            margin-top: 10px;  
+            padding: 10px 80px 10px 80px;
+            text-decoration: none;
+            float: left;
+           }
+           #afui .home_list{
+            margin: 10px ;
+            
+           }
+           #afui .home_list img{
+           margin: 0 auto;
+            height: 200px;
+            width: 100%;
+           }
+           #afui .home_lists{
+            border:1px solid red;
+            width: 100%;
+            height: 200px;
+           }
+           /*轮播*/
+          .carousel_paging2 {
+             border-radius: 10px;
+            background: #ccc;
+            width: 10px;
+            height: 10px;
+            display:inline-block;
+         }
+
+          .carousel_paging2_selected {
+            border-radius: 10px;
+      
+      background: #000;
+      width: 10px;
+      height: 10px;
+      display:inline-block;
+    }
+
+    .spacer {
+      width: 10px;
+      float: left;
+    }
+
+    .carousel_content {
+      -webkit-transform: translate3d(0, 0, 0);
+    }
+    .change img{
+      height: 200px;
+      width: 100%;
+    }
+    .home_main{
+      position: relative;
+     
+    }
+    .shop{
+      z-index: 99;
+      position:fixed;
+      border:1px solid red;
+      background-color: red;
+      
+    }
+     /*1t3 外边框*/
+    .list_man{    
+      
+      width: 100%;
+      height:1050px;
+      margin:5px 0px 5px 0px;
+    }
+
+
+    /*左边*/
+    /*1t3 左边边框*/
+    .list_f_man{
+      margin-bottom: 30px;
+      width: 45%;
+      height: 230px;
+     float: left;
+     margin-left:3%;
+     position: relative;
+    }
+    .list_f_man a{
+      text-decoration: none;
+    }
+    /*1t3 HOT*/
+    .list_f_man .man_img_icon_1{
+      
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top:-2px;
+      left:-2px;
+      
+    }
+     
+    /*1t3 右产品名外框*/
+    .list_f_man .content{
+      color:#76787b;
+      font-weight: lighter;
+      height: 45px;
+      font-size: 10px;
+      text-decoration: none;
+      position: relative;
+    }
+    /*1t3 价钱*/
+    .list_f_man .price{
+      color:#3188ef;
+      font-size:15px;
+    }
+    /*1t3 左侧爱心*/
+    .list_f_man .content .love_icon{
+      width: 28px;
+      height: 20px;
+      position: absolute;
+      top:15px;
+      right:0px;
+      background:url(../images/love_icon1.png) no-repeat;
+    }
+
+
+    /* 1T3  右侧*/
+    /*1t3 右侧边框
+     .list_s_man{
+      width: 45%;
+      height: 220px;
+      float: left;
+      margin-left: 5%;
+      position: relative;
+    }*/
+
+    /*1t3 new*/
+    .list_f_man .man_img_icon_4{
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top:-2px;
+      left:-2px;
+       background:url(../images/man_img_icon_new.png) no-repeat;
+    }
+    /*1t3 右边框产品名
+    .list_s_man .content{
+      color:#76787b;
+      font-weight: lighter;
+      height: 45px;
+      font-size: 10px;
+      text-decoration: none;
+      position: relative;
+     
+    }
+     /*1t3 右边爱心
+    .list_s_man .content .love_icon{
+      width: 28px;
+      height: 20px;
+      position: absolute;
+      top:15px;
+      right:0px;
+      background:url(../images/love_icon1.png) no-repeat;
+    }
+    /*1t3 右边框产品价格
+    .list_s_man .price{
+      color:#3188ef;
+      font-size:15px;
+      
+    }*/
+    /*1t3 产品图片*/
+    .man_img{
+      width: 100%;
+      height: 209px;
+      position: relative;
+    }
+    .woman{
+      margin-top: -5.2px;
+    }
+    .woman_list{
+      width:100%
+    }
+.man{
+   margin-top: -5.2px;
+}
+
+.man_list{
+      width:100%
+    }
+.other{
+    margin-top: -5.2px;
+}
+.other_list{
+  width: 100%;
+}
+#afui .nav{
+  width: 100%;
+  height: 30%;
+  border:1px solid red;
+}
+/*新品*/
+.new_goods{
+  border:1px solid red;
+  width: 100%;
+  height: 200px;
+  position: relative;
+}
+
+/*商品详细列表*/
+.list_icon_right{
+
+  width: 100px;
+  height: 40px;
+  float: right;
+}
+
+.list_icon_share{
+  
+   margin-left:20px;
+  width: 40px;
+  height: 40px;
+}
+.list_icon_share a{
+
+  
+  height: 40px;
+  display: block;
+  line-height: 40px;
+  background: url(../images/list_icon.png) no-repeat -5px 10px;
+}
+.list_icon_shop{
+
+  width: 40px;
+  height: 40px;
+  float: right;
+  margin-top:-40px;
+}
+.list_icon_shop a{
+  height: 40px;
+  display: block;
+  line-height: 40px;
+  background: url(../images/list_icon.png) no-repeat -53px 10px;
+}
+.man_list_top{
+  width: 100%;
+  height:200px;
+}
+.man_list_cover{
+  width: 100%;
+  height: 100%;
+}
+.man_list_cont{
+  height: auto;
+  width: 100%;
+  background-color: #fff;
+
+}
+.man_list_pic{
+  width: 50%;
+  float: left;
+  margin-left:2%;
+}
+.man_list_pic .new{
+  color:#3389f0;
+  font-size:  20px;
+  margin-left: 2%;
+ 
+}
+.man_list_title{
+  margin-left:3%;
+}
+.man_list_heart{
+  width: 30px;
+  height: 30px;
+  float: right;
+  margin-right: 2%;
+  background:url(../images/love_icon_c.png) no-repeat center center;
+}
+/*打折促销icon*/
+.man_icon_discount{
+  width: 35%;
+  height: 28px;
+  float: left;
+}
+.man_icon{
+  margin-top:3px;
+  width: 35px;
+  height: 20px;
+  float: left;
+  margin-left:3px;
+}
+.man_icon img{
+  width: 100%;
+}
+.man_icon1{
+  background: #69acfb;
+  color:#fff;
+  font-size: 15px;
+  float: left;
+  text-align: center;
+}
+.man_icon2{
+  background: #f3ed56;
+  color:#fff;
+  float: left;
+  font-size: 15px;
+  text-align: center;
+}
+.man_icon3{
+  background: #ec4353;
+  color:#fff;
+  float: left;
+  font-size: 15px;
+  text-align: center;
+}
+/*送货时间*/
+.time{
+  width: 85%;
+  height: 30px;
+  border-top:1px solid #ccc;
+  margin: 3% auto 0px auto;
+  clear: both;
+}
+.time_cont{
+  width: 80%;
+  height: 30px;
+  margin:  0 auto;
+  padding-top:1%;
+}
+.time_title{
+  width: 50%;
+  float: left;
+}
+.time_list{
+  width: 50%;
+  height: 30px;
+  float: left;
+}
+.time_list div{
+  display:inline-block;
+  padding:0px;
+  margin: 0px  -2px;
+}
+/*优惠券*/
+.Coupon{
+  width: 95%;
+  height: auto;
+  background: #fff;
+  margin: 10px auto 0px auto;
+  padding:10px;
+  position: relative;
+}
+.Coupon_list{
+  position: absolute;
+  width: 74%;
+  height: 30px;
+  left:26%;
+  top:8px;
+}
+.Coupon_list div{
+  text-align: center;
+  font-size: 10px;
+  display:inline-block;
+  width: 30%;
+  height: auto;
+  padding: 3px;
+  margin: 2px  0px 5px 5px;
+}
+.Coupon_list div a{
+  text-decoration: none;
+  color:#fff;
+  display:inline-block;
+  width: 100%;
+  height: 100%;
+}
+.Coupon_list_1{
+  background-color: #f8c053;
+  border:1.5px dashed ;
+  border-top:none;
+  border-bottom:none;
+}
+.Coupon_list_2{
+  background-color: #e565e3;
+  border:1.5px dashed ;
+  border-top:none;
+  border-bottom:none;
+}
+.Coupon_list_3{
+  background-color: #fb6165;
+  border:1.5px dashed ;
+  border-top:none;
+  border-bottom:none;
+}
+/*店铺*/
+.man_shop{
+  width: 95%;
+  margin:10px auto 0px auto;
+  background: #fff;
+  padding: 10px;
+}
+.main_shop_logo a{
+  border:1px solid #ccc;
+  border-radius: 50%;
+  margin-top: -5px;
+  width: 40px;
+  height: 40px;
+  float: left;
+  text-decoration: none;
+}
+.main_shop_logo a img{
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  float: left;
+  text-decoration: none;
+}
+
+.man_shop_title{
+  background-color: #f6b663;
+  width: 70px;
+  height: 30px;
+  border-radius: 5px;
+  text-align: center;
+  margin-left: 80%;
+
+}
+.man_shop_title a{
+  line-height: 30px;
+  text-decoration: none;
+  color: #fff;
+}
+/*产品详细图文介绍*/
+.man_main{
+  width: 100%;
+  height: auto;
+  margin:10px auto 0px auto;
+}
+.man_main img{
+  width: 100%;
+  height: 350px;
+}
+.man_list_more{
+  position: absolute;
+  top:240px;
+  text-decoration: none;
+  right:0px;
+  color:#fff;
+  width: 50px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 3px;
+  padding: 0px 3px;
+  border:1px solid #fff;
+}
+
+.man_main_more{
+  width: 98%;
+  margin:0 auto;
+  height: 65px;
+}
+.man_main_more a{
+  border:1px solid #ccc;
+  display: block;
+  line-height: 50px;
+  background: #fff;
+  color: black;
+   border-radius: 3px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/*详细列表头部大图详细列表底部*/
+
+.man_list_cont_list img{
+  width: 100%;
+  height: 340px;
+}
+/*个人中心*/
+.Member_Center_user{
+
+  margin-top:1%;
+  background: #fff;
+  width: 100%;
+  height: 90px;
+
+
+}
+.Member_Center_user_logo{
+  float: left;
+  width: 78px;
+  height: 78px;
+  border-radius: 4px;
+  margin:3px;
+
+}
+.Member_Center_user_logo img{
+  width: 100%;
+  height: 78px;
+  border-radius: 4px;
+
+}
+.Member_Center_user_content{
+  margin: 3px 0px;
+
+  width: 60%;
+  height: 78px;
+ float: left;
+
+}
+.Member_Center_user_content .content{
+  height: 40px;
+}
+.Member_Center_user_content  .name{
+ 
+  font-size: 1.5em;
+  margin-bottom: -8px;
+  color: black;
+  line-height: 40px;
+}
+.Member_Center_user_content  .address{
+ 
+  color: #3389f0;
+  line-height: 40px;
+}
+.Member_Center_user_content  .address a{
+  margin-left:-10px;
+  text-decoration: none;
+  color: black;
+  font-size: .8em;
+}
+.Member_Center_right{
+
+ width: 10%;
+ float: left;
+margin: 3px;
+ height: 30px;
+}
+.Member_Center_right a{
+  margin:23px 0px;
+  text-decoration: none;
+  color:#0088D1;
+  
+}
+/*个人中心菜单*/
+#top_header{
+  height: auto;
+}
+#top_header h1{
+  
+}
+.top_header{
+  
+  height: 35px;
+}
+.Member_Center_nav{
+  border-top: 1px solid #dedede;
+  background: #fff;
+  width: 100%;
+  margin: 0 auto;
+  height: 59px;
+}
+.Member_Center_nav_list{
+  width: 99%;
+  height: 100%;
+}
+.Member_Center_nav_list ul{
+  width: 99%;
+  height: 100%;
+
+}
+.Member_Center_nav_list ul li{
+  height: 40px;
+  text-align: center;
+  float: left;
+  width: 33%;
+  list-style:none;
+  margin:0 0 0 1px;
+}
+.Member_Center_nav_list ul li a{
+  margin-left: 7px;
+  display: block;
+  position: relative;
+  top:0px;
+  text-decoration: none;
+  width: 99%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #565959;
+  line-height: 40px;
+}
+.Member_Center_nav_list ul li  p {
+  color:black;
+  position: relative;
+  top:-9px;
+  left:3px;
+  display: block;
+  width:99%;
+  padding-left:-3px;
+  height: 20px;
+  border-bottom:1px solid #ccc;
+  
+}
+#aufi #Member_Center_content_distribution{
+  border:2px solid #3188ef ;
+  margin-left: 3px;
+  border-top:none;
+  margin-top: 1000px;
+ 
+
+}
+.Member_Center_distribution_list{
+  border-bottom:1px solid #ccc;
+  padding: 0px;
+  margin:0 auto;
+  width: 98%;
+  background: #fff;
+  height: 150px;
+}
+.goods{
+  height: 75%;
+}
+
+.goods_check{
+  
+  float:left;
+  width: 30px;
+  height: 75%;
+  padding: 40px 0px 0px 30px; 
+
+}
+.goods_list{
+  border-bottom:1px solid #ccc;
+  float: left;
+  width: 90%;
+  height: 110px;
+}
+.goods_logo{
+  float: left;
+  width: 22%;
+  height: 100%;
+  
+}
+.goods_logo img{
+  margin:24px 0px;
+  width: 60px;
+  height: 60px;
+
+}
+.goods_list_content{
+  float: left;
+  width:58%;
+  height: 100%;
+}
+.goods_name{
+  width: 100%;
+  height:auto;
+  padding: 10px 0px 10px 5px;
+  color:black;
+}
+.goods_standard{
+  width: 100%;
+  height: auto;
+  padding-left: 5px;
+  color:#dedede;
+}
+.goods_list_price{
+  
+  float: left;
+  width: 10%;
+  height: 100%;
+}
+.goods_price_list{
+  margin-top: 15px;
+}
+.goods_list_price_new{
+  color:black;
+  margin-top: 30px;
+
+}
+.goods_list_price__old{
+ color: #dedede;
+}
+.goods_time{
+ 
+  width:100%;
+  height: 36px;
+ 
+}
+.goods_distribution_time{
+ color: black;
+ width:40% ;
+ float: left;
+}
+.goods_distribution_personnel{
+  color:#ccc;
+  width: 30%;
+  float: left;
+  height: 30px;
+}
+.goods_total{
+  float: right;
+  width: 30%;
+  height: 100%;
+
+}
+.complete{
+  border-radius: 50%;
+  width:50px;
+  height: 50px;
+  text-align: center;
+  padding-top:3%;
+  border:1px dashed red;
+  position: relative;
+  left:80%;
+  top:-60%;
+  background: url(../images/complete.png);
+}
+
+.Member_Center_distribution_lists{
+  clear: both;
+  border-bottom:1px solid #ccc;
+  padding: 0px;
+  margin:0 auto;
+  border-radius;
+  width: 98%;
+  background: #fff;
+  height: 150px;
+
+}
+#afui #Member_Center_content_complete{
+   border-top:none;background:#fff;padding:0px
+ 
+}
+#afui #Member_Center_content_comment{
+  border-top:none;background:#fff;padding:0px
+ 
+}
+
+.address_select{
+  margin-top:10px;
+  color:black;
+  text-align: center;
+  font-size:20px;
+}

@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<!--HTML5 doctype-->
+<html>
+
+    <head>
+        <script>
+        (function() {
+      if ("-ms-user-select" in document.documentElement.style && navigator.userAgent.match(/IEMobile\/10\.0/)) {
+        var msViewportStyle = document.createElement("style");
+        msViewportStyle.appendChild(
+            document.createTextNode("@-ms-viewport{width:auto!important}")
+        );
+        document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+    }
+})();
+</script>
+
+        <title>速达易</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="stylesheet" type="text/css" href="css/icons.css" />    
+  
+       <!--   
+     <link rel="stylesheet" type="text/css" href="css/af.ui.css" title="default" />
+  -->
+      <link rel="stylesheet" type="text/css" href="css/main.css"  />
+      <link rel="stylesheet" type="text/css" href="css/bb.css"  />
+      <link rel="stylesheet" type="text/css" href="css/appframework.css"  />
+      <link rel="stylesheet" type="text/css" href="css/lists.css"  />
+      <link rel="stylesheet" type="text/css" href="css/forms.css"  />
+      <link rel="stylesheet" type="text/css" href="css/buttons.css"  />        
+      <link rel="stylesheet" type="text/css" href="css/badges.css"  />        
+      <link rel="stylesheet" type="text/css" href="css/grid.css"  />
+      <link rel="stylesheet" type="text/css" href="css/index.css"  />
+      
+      <link rel="stylesheet" type="text/css" href="css/myandroid.css"  />     
+        
+      <link rel="stylesheet" type="text/css" href="plugins/css/af.actionsheet.css"  />
+      <link rel="stylesheet" type="text/css" href="plugins/css/af.popup.css"  />
+      <link rel="stylesheet" type="text/css" href="plugins/css/af.scroller.css"  />
+      <link rel="stylesheet" type="text/css" href="plugins/css/af.selectBox.css"  />        
+        
+        <!-- uncomment for intel.xdk apps 
+        <script type="text/javascript" charset="utf-8" src="intelxdk.js"></script>
+        <script type="text/javascript" charset="utf-8" src="xhr.js"></script>
+        -->
+		<!--
+		<script type="text/javascript" charset="utf-8" src="./jquery2.1.js"></script>
+     >
+		<script type="text/javascript" charset="utf-8" src="./appframework.js"></script>
+		-->
+        <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./jq.appframework.js"></script>
+		
+        <!-- include af.desktopBrowsers.js on desktop browsers only -->
+        <script>
+
+            function loadedPanel(what) {
+                //We are going to set the badge as the number of li elements inside the target
+                $.ui.updateBadge("#aflink", $("#af").find("li").length);
+            }
+
+
+            function unloadedPanel(what) {
+                console.log("unloaded " + what.id);
+            }
+
+            if (!((window.DocumentTouch && document instanceof DocumentTouch) || 'ontouchstart' in window)) {
+                var script = document.createElement("script");
+                script.src = "plugins/af.desktopBrowsers.js";
+                var tag = $("head").append(script);
+                //$.os.desktop=true;
+            }
+
+          //  $.feat.nativeTouchScroll=true;
+          
+        </script>        
+        <script type="text/javascript" charset="utf-8" src="./plugins/af.actionsheet.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./plugins/af.css3animate.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./plugins/af.passwordBox.js"></script>          
+        <script type="text/javascript" charset="utf-8" src="./plugins/af.scroller.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./plugins/af.selectBox.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./plugins/af.touchEvents.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./plugins/af.touchLayer.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./plugins/af.popup.js"></script>
+
+        <script type="text/javascript" charset="utf-8" src="./ui/appframework.ui.js"></script>
+        <!-- <script type="text/javascript" charset="utf-8" src="./ui/transitions/all.js"></script> -->
+        <script type="text/javascript" charset="utf-8" src="./ui/transitions/fade.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./ui/transitions/flip.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./ui/transitions/pop.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./ui/transitions/slide.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./ui/transitions/slideRight.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./ui/transitions/slideDown.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./ui/transitions/slideUp.js"></script>
+        <script type="text/javascript" charset="utf-8" src="./plugins/af.slidemenu.js"></script>
+        <script src="af.carousel.js"></script>
+
+        <script type="text/javascript">
+            /* This function runs once the page is loaded, but intel.xdk is not yet active */
+            //$.ui.animateHeaders=false;
+           
+            
+			
+			$.ui.ready(function(){
+                    $("#afui").get(0).className='myandroid';
+					
+					//$.ui.loadContent("#bangdan_panel",false,false,"up");
+            });
+            // $.os.android=true;
+            //$.ui.autoLaunch = false;
+            $.ui.openLinksNewTab = false;
+            $.ui.splitview=false;
+			$.ui.slideSideMenu = false;
+			$.ui.animateHeaders = false;
+            $(document).ready(function(){
+                  $.ui.launch();
+            });     
+			
+			//设置选中
+			function tabTopNav(e){	
+				var li=document.getElementById('top_tab_ul').getElementsByTagName('li');	
+				for (var i = 0; i <li.length; i++) {
+					li[i].className = "";
+				}				
+				document.getElementById(e).className = "select";	
+			}
+			
+			//panelload
+		 	//推荐
+		  	function load_tuijian_panel(){
+				tabTopNav('tuijian_tab');
+			}
+			function  unload_tuijian_panel(){
+				
+			}
+			//榜单
+			function load_bangdan_panel(){
+				tabTopNav('bangdan_tab');
+			}
+			function unload_bangdan_panel(){
+				
+			}
+			//分类
+            function load_fenlei_panel(){
+				tabTopNav('fenlei_tab');
+			}
+			function unload_fenlei_panel(){
+				
+			}			
+			//我的
+			function load_wode_panel(){
+				tabTopNav('wode_tab');
+			}
+			function unload_wode_panel(){
+				
+			}		        
+			
+						
+			
+        </script>
+    
+</head>
+
+    <body>
+        <div id="afui"  class="bb">
+            <div id="content">
+    
+              <!-- 首页 -->                     
+                <div title='首页' id="tuijian_panel"  data-footer="none" class="panel"  style="padding:0px ;" data-header="headerui" selected="true"   style="background-color:#EDEDED" >
+                    <!-- 轮播 -->
+                  <div id="carousel_dots" style="text-align: center; margin:auto;  display : table; clear: both; position: relative;  top:180px;  z-index: 200">
+                  </div>
+                  <div id="carousel" style="display:block;height:200px;width:100%;position: relative; top:-25px;padding:0px;margin:0px;">
+                     <div class="change"><a ><img src="images/4.jpg" alt=""></a></div>
+                     <div class="change"><a><img src="images/1.jpg" alt=""></a></div>
+                     <div class="change"><a><img src="images/2.jpg" alt=""></a></div>
+                     <div class="change"><a><img src="images/3.jpg" alt=""></a></div>
+                  </div>
+                      
+                     <!-- A产品 -->
+                     <div id="pic" style="margin-top:-30px;">     
+                     </div>
+                     <!-- B产品 -->
+                     <!--c产品 -->
+                     <!--d产品 -->
+                </div>
+                  
+                <!--登录-->
+                <div title="会员中心" id="transition7" class="panel" data-header="pul_header">
+                    <br>
+                        <form>
+                                <div class="login_w">
+                                <input placeholder="用户名" type="text">
+                                <input placeholder="密码" type="password">
+                                </div>
+                                <a href="#Member_Center_content_distribution" class="login">登录</a>
+                                <a  class="F_password" href="#">找回密码</a>
+                                <a href="#transition8" class="register" >注册</a>
+                        </form>
+                   
+                </div>
+                 <!--注册-->
+                <div title="会员中心" id="transition8" class="panel" data-header="pul_header">
+                    <br>
+                        <form>
+                                <div class="register_w">
+                                <input placeholder="用户名" type="text">
+                                <input placeholder="密码" type="password">
+                                <input placeholder="确认密码" type="password">
+                                <input placeholder="手机号码" type="text">
+                                </div> 
+                                <a  class="b_register" href="#" >注册</a>
+                        </form>
+                   
+                </div>
+                <!--登录/注册头文件-->
+                <header id="pul_header"> 
+                    <div class="top_header">
+                        <a  id="backButton" class="button" style="top:9px;" ></a>
+                        <h1 style="font-family: Microsoft YaHei;">速达易</h1>
+                         <a onclick="af.ui.toggleSideMenu()" class="menuButton" style="float:right"></a>
+                    </div>
+                </header>
+
+
+                <!--会员中心-->
+                <!--配送-->
+               <div  class="panel" title="会员中心" id="Member_Center_content_distribution" style="background:#fff;padding:0px" data-header="top_header" > 
+               <!-- -->  
+                    <div class="Member_Center_distribution_list">
+                        <div class="goods">
+                          <div class="goods_check">
+                           <input  id="goods" type="checkbox" >
+                           <label   for="goods"></lab>
+                          </div>
+                          <div class="goods_list">
+                          <div class="goods_logo">
+                            <img src="images/man4.jpeg" alt="">
+                          </div>
+                          <div class="goods_list_content">
+                            <p class="goods_name">2014年秋冬新款韩版圆领甜美潮范晕卫衣</p>
+                            <p class="goods_standard">颜色:WT016红衣黑袖；尺码</p>
+                          </div>
+                          <div class="goods_list_price">
+                            <div class="goods_price_list">
+                            <span class="goods_list_price_new">￥89.0</span>
+                            <del class="goods_list_price__old">￥1999.0</del>
+                            </div>
+                          </div>
+                          </div>
+                        </div>
+                        <div class="goods_time">
+                          <p class="goods_distribution_personnel">配送员:吴伟东</p>
+                          <p class="goods_distribution_time">送达时间为:12:23:00</p>
+                          <p class="goods_total">合计:￥9999.0</p>
+                        </div>
+                     </div>
+    
+                      <div class="Member_Center_distribution_lists">
+                         <div class="goods">
+                          <div class="goods_check">
+                           <input  id="bbb" type="checkbox" >
+                           <label   for="bbb"></lab>
+                          </div>
+                          <div class="goods_list">
+                          <div class="goods_logo">
+                            <img src="images/w3.jpeg" alt="">
+                          </div>
+                          <div class="goods_list_content">
+                            <p class="goods_name">2014年秋冬新款韩版圆领甜美潮范晕卫衣</p>
+                            <p class="goods_standard">颜色:WT016红衣黑袖；尺码</p>
+                          </div>
+                          <div class="goods_list_price">
+                            <div class="goods_price_list">
+                            <span class="goods_list_price_new">￥89.0</span>
+                            <del class="goods_list_price__old">￥1999.0</del>
+                            </div>
+                          </div>
+                          </div>
+                        </div>
+                        <div class="goods_time">
+                          <p class="goods_distribution_personnel">配送员:吴伟东</p>
+                          <p class="goods_distribution_time">送达时间为:12:23:00</p>
+                          <p class="goods_total">合计:￥9999.0</p>
+                        </div>
+                      </div>
+                      <div class="Member_Center_distribution_lists">
+                        <div class="goods">
+                          <div class="goods_check">
+                           <input  id="ccc" type="checkbox" >
+                           <label   for="ccc"></lab>
+                          </div>
+                          <div class="goods_list">
+                          <div class="goods_logo">
+                            <img src="images/o1.jpeg" alt="">
+                          </div>
+                          <div class="goods_list_content">
+                            <p class="goods_name">2014年秋冬新款韩版圆领甜美潮范晕卫衣</p>
+                            <p class="goods_standard">颜色:WT016红衣黑袖；尺码</p>
+                          </div>
+                          <div class="goods_list_price">
+                            <div class="goods_price_list">
+                            <span class="goods_list_price_new">￥89.0</span>
+                            <del class="goods_list_price__old">￥1999.0</del>
+                            </div>
+                          </div>
+                          </div>
+                        </div>
+                        <div class="goods_time">
+                          <p class="goods_distribution_personnel">配送员:吴伟东</p>
+                          <p class="goods_distribution_time">送达时间为:12:23:00</p>
+                          <p class="goods_total">合计:￥9999.0</p>
+                        </div>
+                      </div>
+                       <div class="Member_Center_distribution_lists">
+                        <div class="goods">
+                          <div class="goods_check">
+                           <input  id="ddd" type="checkbox" >
+                           <label   for="ddd"></lab>
+                          </div>
+                          <div class="goods_list">
+                          <div class="goods_logo">
+                            <img src="images/7.jpeg" alt="">
+                          </div>
+                          <div class="goods_list_content">
+                            <p class="goods_name">2014年秋冬新款韩版圆领甜美潮范晕卫衣</p>
+                            <p class="goods_standard">颜色:WT016红衣黑袖；尺码</p>
+                          </div>
+                          <div class="goods_list_price">
+                            <div class="goods_price_list">
+                            <span class="goods_list_price_new">￥89.0</span>
+                            <del class="goods_list_price__old">￥1999.0</del>
+                            </div>
+                          </div>
+                          </div>
+                        </div>
+                        <div class="goods_time">
+                          <p class="goods_distribution_personnel">配送员:吴伟东</p>
+                          <p class="goods_distribution_time">送达时间为:12:23:00</p>
+                          <p class="goods_total">合计:￥9999.0</p>
+                        </div>
+                      </div>
+                       <div class="Member_Center_distribution_lists">
+                        
+                      </div>
+                        <div class="Member_Center_distribution_lists">
+                        
+                      </div>
+                       <div class="Member_Center_distribution_lists">
+                        
+                      </div>
+                 </div>
+                 <!--完成-->  
+               <div  class="panel"  id="Member_Center_content_complete" data-header="top_header"  class="panel">
+                      <div class="Member_Center_distribution_list">
+                         <div class="goods">
+                          <div class="goods_list">
+                          <div class="goods_logo">
+                            <img src="images/15.jpeg" alt="">
+                          </div>
+                          <div class="goods_list_content">
+                            <p class="goods_name">2014年秋冬新款韩版圆领甜美潮范晕卫衣</p>
+                            <p class="goods_standard">颜色:WT016红衣黑袖；尺码</p>
+                          </div>
+                          <div class="goods_list_price">
+                            <div class="goods_price_list">
+                            <span class="goods_list_price_new">￥89.0</span>
+                            <del class="goods_list_price__old">￥1999.0</del>
+                            </div>
+                          </div>
+                          </div>
+                        </div>
+                        <div class="goods_time">
+                          <p class="goods_distribution_personnel">配送员:吴伟东</p>
+                          <p class="goods_distribution_time">送达时间为:12:23:00</p>
+                          <p class="goods_total">合计:￥9999.0</p>
+                        </div>
+                        <div class="complete"></div>
+                      </div>
+                      <div class="Member_Center_distribution_lists">
+                          <div class="goods">
+                          <div class="goods_list">
+                          <div class="goods_logo">
+                            <img src="images/man4.jpeg" alt="">
+                          </div>
+                          <div class="goods_list_content">
+                            <p class="goods_name">2014年秋冬新款韩版圆领甜美潮范晕卫衣</p>
+                            <p class="goods_standard">颜色:WT016红衣黑袖；尺码</p>
+                          </div>
+                          <div class="goods_list_price">
+                            <div class="goods_price_list">
+                            <span class="goods_list_price_new">￥89.0</span>
+                            <del class="goods_list_price__old">￥1999.0</del>
+                            </div>
+                          </div>
+                          </div>
+                        </div>
+                        <div class="goods_time">
+                          <p class="goods_distribution_personnel">配送员:吴伟东</p>
+                          <p class="goods_distribution_time">送达时间为:12:23:00</p>
+                          <p class="goods_total">合计:￥9999.0</p>
+                        </div>
+                        <div class="complete"></div>
+                      </div>
+                      <div class="Member_Center_distribution_lists">
+                          <div class="goods">
+                          <div class="goods_list">
+                          <div class="goods_logo">
+                            <img src="images/9.jpeg" alt="">
+                          </div>
+                          <div class="goods_list_content">
+                            <p class="goods_name">2014年秋冬新款韩版圆领甜美潮范晕卫衣</p>
+                            <p class="goods_standard">颜色:WT016红衣黑袖；尺码</p>
+                          </div>
+                          <div class="goods_list_price">
+                            <div class="goods_price_list">
+                            <span class="goods_list_price_new">￥89.0</span>
+                            <del class="goods_list_price__old">￥1999.0</del>
+                            </div>
+                          </div>
+                          </div>
+                        </div>
+                        <div class="goods_time">
+                          <p class="goods_distribution_personnel">配送员:吴伟东</p>
+                          <p class="goods_distribution_time">送达时间为:12:23:00</p>
+                          <p class="goods_total">合计:￥9999.0</p>
+                        </div>
+                        <div class="complete"></div>
+                      </div>
+               </div>
+                 <!--评论--->  
+              <div  class="panel" id="Member_Center_content_comment"   data-header="top_header"   class="panel">
+                      <div class="Member_Center_distribution_list">
+                        
+                      </div>
+                      <div class="Member_Center_distribution_lists">
+                        
+                      </div>
+              </div>  
+                  
+                </div>
+               
+                <!--会员中心头部-->
+                  <header id="top_header"> 
+                    <div class="top_header">
+                         <a  id="backButton"  href="#tuijian_panel" class="button" style="top:9px;" ></a>
+                        <h1 style="font-family: Microsoft YaHei;">个人中心</h1>
+                         <a onclick="af.ui.toggleSideMenu()" class="menuButton" style="float:right;"></a>
+                     </div>
+                      <div class="Member_Center_user">
+                           <div class="Member_Center_user_logo">
+                               <img  src="images/user_logo.jpg" alt="">
+                           </div>
+                           <div class="Member_Center_user_content">
+                             <div class="content name">Hikaru</div>
+                                <div class="icon location big content address">
+                                 <a href="#">深圳罗湖区长丰苑主楼1621</a>
+                                </div>
+                           </div>
+                           <div class="Member_Center_right">
+                                <a class=" icon tools big" href="#"> </a>
+                           </div>
+                       </div>
+                       <div class="Member_Center_nav" >
+                           <div class="Member_Center_nav_list">
+                             <ul>
+                               <li id="distribution_tab"><a class="icon new big" href="#Member_Center_content_distribution"></a><p>配送中</p></li>
+                               <li id="complete_tab"><a class="icon lamp big" href="#Member_Center_content_complete"></a><p>已完成</p></li>
+                               <li id="comment_tab"><a class="icon chat big" href="#Member_Center_content_comment"></a><p>待评论</p></li>
+                             </ul>
+                           </div>
+                       </div>
+                  </header>
+              
+                        
+                    
+              
+
+                <!--男装页面-->
+          <div title="男装" id="transition9" class="panel" style="padding:0px; background:#EDEDED;" >
+                   <header id="man_header"> 
+                    <div class="top_header"  >
+                        <a  id="backButton"  onclick="$.ui.goBack()"  class="button" style="top:9px;" ></a>
+                        <h1 style="font-family: Microsoft YaHei;">男装</h1>
+                         <a onclick="af.ui.toggleSideMenu()" class="menuButton" style="float:right"></a>
+                     </div>
+                </header>
+                 
+                   <div ><a href="#"><img  style="width:100%"src="images/o1.jpeg" alt=""></a></div>
+                   <div class="man"><a href="#"><img  class="man_list" src="images/o2.jpeg" alt=""></a></div>
+                 
+                 <!--产品列表-->
+                   <div class="list_man">  
+                   
+                  
+                   </div>             
+          </div>
+               
+               
+                
+                <!---产品详细列表-->
+            <div title="男装" id="man_list"  class="panel" style="background-color:#EDEDED;padding:0px"  data-footer="coustom_footer" >
+                   <header > 
+                    <div class="top_header"  >
+                        <a  id="backButton" class="button" style="top:9px;" ></a>
+                        <div class="list_icon_right">
+                          <div class="list_icon_share"><a  href="#"></a></div>
+                          <div class="list_icon_shop"><a  href="#"></a></div>
+                        </div>
+                     </div>
+                   </header>
+
+
+                <div class="man_list_cont" >
+                  <div class="man_list_top">
+                   
+                   </div>
+                   <div class="man_list_title">
+                     
+                   </div>
+                   <div class="man_list_pic">
+                   <del class="old">￥999.00</del>
+                   </div>
+                   <div class="man_icon_discount">
+                   <div class="man_icon man_icon1"><span>包邮</span></div>
+                   <div class="man_icon man_icon2"><span>5折</span></div>
+                   <div class="man_icon man_icon3"><span>1T3</span></div>
+                   </div>
+                   <div class=" man_list_heart"></div>
+                   <div class="time">
+                    <div class="time_cont">
+                        <div class="time_title">
+                        距离你家时间为:
+                        </div>
+                        <div class="time_list"> 
+                             <div>0</div>
+                             <div>2</div>
+                             <div>时</div>
+                             <div>4</div>
+                             <div>5</div>
+                             <div>分</div>
+                             <div>5</div>
+                             <div>6</div>
+                             <div>秒</div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                   <div class="Coupon">店铺优惠券: 
+                     <div class="Coupon_list">
+                       <div class="Coupon_list_1"><a href="#">100减50</a></div>
+                       <div class="Coupon_list_2"><a href="#">200减100</a></div>
+                       <div class="Coupon_list_3"><a href="#">7折</a></div>
+                     </div>
+                   </div>
+                   <div class="man_shop">
+                    <div class="main_shop_logo"><a href="#"><img src="images/shop_logo.jpg" alt="" title="logo"></a></div>
+                     <div class="man_shop_title"><a href="#">进店逛逛</a></div>
+                   </div>
+                   <div class="man_main">
+                      
+                   </div>
+                   <div class="man_main_more">
+                     <a href="#transition9">查看更多商品>></a>
+                   </div>
+                  
+                   
+            </div>
+
+           
+
+              <!---详细列表头部大图详细列表-->
+               <div title="详细图片" id="man_list_cont_list" class="panel" style="padding:0px;background-color:#EDEDED;" >
+                <div class="man_list_cont_list">
+                   <img src="images/man1.jpeg" alt="">
+                   <img src="images/man2.jpeg" alt="">
+                   <img src="images/man7.jpeg" alt="">
+                   <img src="images/man8.jpeg" alt="">
+                </div>
+                </div>
+               
+               
+                <!--女装页面-->
+                <div title="女装" id="transition10" class="panel" style="padding:0px;background-color:#EDEDED;" data-footer="none" >
+                  <header > 
+                    <div class="top_header">
+                        <a  id="backButton" class="button" style="top:9px;" ></a>
+                        <h1 style="font-family: Microsoft YaHei;">女装</h1>
+                         <a onclick="af.ui.toggleSideMenu()" class="menuButton" style="float:right"></a>
+                     </div>
+                  </header>
+                   <div ><a href="#"><img  style="width:100%"src="images/w1.jpeg" alt=""></a></div>
+                   <div class="woman"><a href="#"><img class="woman_list" src="images/w2.jpeg" alt=""></a></div>
+                    <div class="list_man">  
+                   
+                  
+                   </div>  
+                </div>
+
+        
+                
+
+                <!--其他页面-->
+                <div title="其他" id="transition11" class="panel" style="padding:0px;background-color:#EDEDED" data-footer="none">
+                  <header> 
+                    <div class="top_header">
+                        <a  id="backButton" class="button" style="top:9px;" ></a>
+                        <h1 style="font-family: Microsoft YaHei;">其他</h1>
+                         <a onclick="af.ui.toggleSideMenu()" class="menuButton" style="float:right"></a>
+                     </div>
+                  </header>
+                  <div ><a href="#"><img  style="width:100%"src="images/01.jpeg" alt=""></a></div>
+                  <div class="other"><a href="#"><img class="other_list" src="images/02.jpeg" alt=""></a></div>
+                  <div class="other"><a href="#"><img class="other_list" src="images/03.jpeg" alt=""></a></div>
+                  <div class="other"><a href="#"><img class="other_list" src="images/04.jpeg" alt=""></a></div>
+                  <div class="other"><a href="#"><img class="other_list" src="images/05.jpeg" alt=""></a></div>
+                  <div class="other"><a href="#"><img class="other_list" src="images/06.jpeg" alt=""></a></div>
+                  <div class="other"><a href="#"><img class="other_list" src="images/07.jpeg" alt=""></a></div>   
+                </div>
+                
+               
+                          
+
+    
+
+                <!--首页头文件-->
+                <header id="headerui">
+                   <div class="top_header">
+                    <a onclick="af.ui.toggleSideMenu()" class="menuButton" style="float:left"></a>
+                    <h1>速达易</h1>
+                    <a class="icon location big" href="#city" style="position: absolute;top:6px;right:10px;text-decoration: none; color:#fff"></a>
+                   </div>                     
+                </header>
+                <!---地址选择-->
+                    
+                <!--侧边栏-->
+                <nav>
+                    <ul class="list">                   
+                        <li>
+                            <a href="#tuijian_panel">首页</a>
+                        </li>
+                        <li>
+                            <a href="#transition7" >会员中心</a>
+                        </li>
+                        
+                    </ul>
+                </nav>  
+
+
+                 <div class="panel" id="city">
+                      <header>
+                   <div class="top_header">
+                    <a  id="backButton" class="button" style="top:9px;" ></a>
+                    <h1>速达易</h1>
+                   </div>                     
+                   </header>
+                       <div class="address_select">
+                        <select name="" id="aa">
+                           <option value="">请选择省份</option>
+                       </select>
+                         <select name="" id="bb">
+                           <option value="">请选择城市</option>
+                       </select>
+                         <select name="" id="cc">
+                           <option value="">请选择区域</option>
+                      </select>
+                    </div>
+                    <div>
+                       <a  class="F_password" href="#">确定</a>
+                       <a href="#" class="register" >取消</a>
+                    </div>
+                </div>               
+    		</div>          
+        </div>
+         <script type="text/javascript" charset="utf-8" src="js/common.js"></script>  
+  <script>
+     
+
+    $(function(){
+     //区域列表
+      $.get(serverURL+'mobile_admin/mobile_login/get_province_in_china',function(data){
+          var obj = JSON.parse(data);
+          var str = "";
+
+          for(var i=0;i<obj.length;i++){
+            str += '<option value='+obj[i]['_id']+'>'+obj[i]['name']+'</option>';
+          }
+
+            $("#aa").append(str);
+      })
+
+      $("#aa").change(function(){
+        var id=$(this).val();
+        $("#bb").html("");
+        $.get(serverURL+'mobile_admin/mobile_login/get_province_id?province_id='+id+'',function(data){
+          var obj = JSON.parse(data);
+          var str = "";
+          str += '<option >请选择</option>';
+          for(var i in obj){
+            str += '<option value='+obj[i]['_id']+'>'+obj[i]['name']+'</option>';
+           
+          }
+            $("#bb").append(str);
+        })
+      })
+      
+      $("#bb").change(function(){
+        var id=$(this).val();
+        $("#cc").html("");
+        $.get(serverURL+'mobile_admin/mobile_login/get_city_id?city_id='+id+'',function(data){
+          var obj = JSON.parse(data);
+          var str = "";
+          str += '<option >请选择</option>';
+          for(var i=0;i<obj.length;i++){
+            
+            str += '<option value='+obj[i]['_id']+'>'+obj[i]['name']+'</option>';
+          } 
+          $("#cc").append(str);
+        })
+
+      })
+   
+      //侧边菜单以及商品列表加载
+      //侧边菜单加载
+       $.get(serverURL+'mobile/welcome/get_cates',function(data){
+          var obj = JSON.parse(data);
+          var str = " ";
+           var count = 8
+          for(var i=0;i<obj.length;i++){
+            count++;
+            str += '<li class="nav_list">'+'<a href="#transition'+count+'" id='+obj[i]['_id']+'>'+ obj[i]['name']+'</a>'+'</li>';
+           }
+            $(".list").append(str);
+
+            //侧边菜单遍历，商品列表加载
+            $(".nav_list").each(function(){
+                $(this).click(function(){
+                var id=$(this).find("a").attr("id");  
+
+                //setItem('manlist_id',id);//定义存储
+
+                $.get(serverURL+'mobile/welcome/get_products_by_cate_id',{cate_id:id},function(data){
+                  var obj = JSON.parse(data);
+                  var str = "";
+                     for(var i in obj[0]){
+
+
+
+                        if(obj[0][i]){
+                          str+='<div class="list_f_man" id='+obj[0][i]['_id']+'>';
+                          str+='<a href="#man_list" class="man_list_cover">';
+                          str+='</a>';
+                          str+='<div class="man_img_icon_1">';
+                          str+='</div>';
+                          str+='<div class="content">'+obj[0][i]['name'];
+                          str+='<div class="price">'+obj[0][i]['price']+'</div>';
+                          str+='<div class="love_icon">'+'</div>';
+                          str+='</div>';
+                          str+='</div>';  
+            } 
+          
+
+          }
+
+                     
+            $(".list_man").html(str);
+
+             $(".list_f_man").each(function(index){ 
+                          var id=$(this).attr("id");
+                          $.get(serverURL+'mobile/welcome/get_images_by_pid',{pid:id},function(data){
+                           var obj = JSON.parse(data);
+                           var str = " ";
+                           var address='http://192.168.1.113';
+                           for(var i in obj){ 
+                                //alert(obj[i]['iscover']);
+                          if(obj[i]['iscover']==1){
+                              str += '<img class="man_img" src='+address+obj[i]['url']['thumb']['url'].toString()+'>';
+                            }else
+                            {
+                                continue;
+                            }//else
+                          }//for
+                           $(".man_list_cover").html(str);
+                          });
+                      });
+       
+            });
+
+
+              });
+           
+                });////侧边菜单遍历结束，以及商品列表加载结束
+/*
+                  var id= getItem('manlist_id');  //使用本地存储     
+
+                   $.get(serverURL+'mobile/welcome/get_products_by_cate_id',{cate_id:id},function(data){
+                  var obj = JSON.parse(data);
+                  var str = "";
+                  var address='http://192.168.1.113';
+                     for(var i in obj){
+                        if(obj[0][i]){
+                          str+='<div class="list_f_man">';
+                          str+='<a href="#man_list">';
+                        
+                          str+='<div class="man_img_icon_1">';
+                          
+                          str+='</div>';
+                          str+='<div class="content">'+obj[0][i]['name'];
+                          str+='<div class="price">'+obj[0][i]['price']+'</div>';
+                          str+='<div class="love_icon">'+'</div>';
+                          str+='</div>';
+                          str+='</a>';
+                          str+='</div>';  
+            }
+            else{
+                          str+='<div class="list_f_man">';
+                          str+='<a href="#man_list">';
+                         
+                          str+='<div class="man_img_icon_1">';
+                         
+                          str+='</div>';
+                          str+='<div class="content">'+obj[0][i]['name'];
+                          str+='<div class="price">面议</div>';
+                          str+='<div class="love_icon">'+'</div>';
+                          str+='</div>';
+                          str+='</a>';
+                          str+='</div>'; 
+            }
+          }
+                     
+            $(".list_f_man").append(str);
+            });//本地存储调用结束
+  */
+      })
+      //侧边栏、商品加载、本地存储结束           
+
+    
+
+
+   
+
+
+   
+       //男装商品列表
+       /*
+       $.get(serverURL+'mobile/welcome/get_pics_a',function(data){
+          var obj = JSON.parse(data);
+          var str = "";
+          var address='http://192.168.1.113';
+         
+          for(var i in obj){
+            if(obj[i]){
+                str+='<div class="list_f_man">';
+                str+='<a href="#man_list">';
+                str+='<img class="man_img" src='+obj+'>';
+                str+='<div class="man_img_icon_1">';
+                str+='<img src='+obj+'>';
+                str+='</div>';
+                str+='<div class="content">'+obj;
+                str+='<div class="price">'+obj+'</div>';
+                str+='<div class="love_icon">'+'</div>';
+                str+='</div>';
+                str+='</a>';
+                str+='</div>';
+              
+            }
+          }
+                     
+            $(".man_list").append(str);
+            });
+            //男装商品列表
+    
+      //男装商品单独详细列表
+          $(".list_f_man").each(function(){
+                $(this).click(function(){
+                var id=$(this).find("img").attr("id");
+
+                setItem('refresh_id',id);
+
+                  $.get(serverURL+'mobile/welcome/get_images_by_pid',{pid:id},function(data){
+                  var obj = JSON.parse(data);
+                  var str2 = "";
+                  var str3 = " ";
+                  var str4 = " ";
+                  var address='http://192.168.1.113';
+
+                for(var i in obj){
+                      if(obj[i]['iscover'] == 1 ){
+                             str2+='<a href="#man_list_cont_list">';
+                             str2+='<img class="man_list_cover" src='+address+obj[i]['url']['url'].toString()+'>';
+                             str2+='</a>';
+                          }
+                      if(obj[i]){
+                             str3+='<img src='+address+obj[i]['url']['url'].toString()+'>';
+                             str4+='<img src='+address+obj[i]['url']['url'].toString()+'>';
+                                  }  
+                  }
+                        $('.man_list_top').html(str2);
+                        $('.man_main').html(str3);
+                        $('.man_list_cont_list').html(str4);
+                })
+                  //A级商品详细商品内容
+                  $.get(serverURL+'mobile/welcome/get_product_by_id',{pid:id},function(data){
+                        var obj = JSON.parse(data);
+                        $(".man_list_pic").html("");
+                        $(".man_list_title").html("");
+                        var str=" ";
+                        var str1=" ";
+                 
+                    if(obj['name']){
+                      str += '<span >'+obj['name']+'</span>'; 
+                      }
+                    if(obj['price']){
+                      str1 += '<span class="new">'+obj['price']+'</span>';
+                    }
+                    else{
+                      str1 += '<span class="new">面议</span>'
+                    }
+                        $('.man_list_title').append(str);
+                        $('.man_list_pic').append(str1);
+                })
+
+                  
+
+      })
+
+               // $(this).unbind('click');
+                })////男装商品列表
+
+
+*/
+
+      //A级图片
+       $.get(serverURL+'mobile/welcome/get_pics_a',function(data){
+          var obj = JSON.parse(data);
+          var str = "";
+          var address='http://192.168.1.113';
+          for(var i in obj){
+            if(obj[i]){
+            str+='<div class="home_list">';
+            str+='<a href="#man_list">';
+            str += '<img src='+address+obj[i]['url']['url'].toString()+' id='+obj[i]['product_id']+'>'+'<br>';
+            str+='</a>';
+            str+='</div>';
+            }
+            else{
+              continue;
+            }
+          }
+                     
+            $("#pic").append(str);//A级图片
+
+           
+           //A级详细图片列表
+            $(".home_list").each(function(){
+                $(this).click(function(){
+                var id=$(this).find("img").attr("id");
+                
+                setItem('refresh_id',id);
+
+                  $.get(serverURL+'mobile/welcome/get_images_by_pid',{pid:id},function(data){
+                  var obj = JSON.parse(data);
+                  var str2 = "";
+                  var str3 = " ";
+                  var str4 = " ";
+                  var address='http://192.168.1.113';
+
+                for(var i in obj){
+                      if(obj[i]['iscover'] == 1 ){
+                             str2+='<a href="#man_list_cont_list">';
+                             str2+='<img class="man_list_cover" src='+address+obj[i]['url']['url'].toString()+'>';
+                             str2+='</a>';
+                          }
+                      if(obj[i]){
+                             str3+='<img src='+address+obj[i]['url']['url'].toString()+'>';
+                             str4+='<img src='+address+obj[i]['url']['url'].toString()+'>';
+                                  }  
+                  }
+                        $('.man_list_top').html(str2);
+                        $('.man_main').html(str3);
+                        $('.man_list_cont_list').html(str4);
+                })
+                  //A级商品详细商品内容
+                  $.get(serverURL+'mobile/welcome/get_product_by_id',{pid:id},function(data){
+                        var obj = JSON.parse(data);
+                        $(".man_list_pic").html("");
+                        $(".man_list_title").html("");
+                        var str=" ";
+                        var str1=" ";
+                 
+                    if(obj['name']){
+                      str += '<span >'+obj['name']+'</span>'; 
+                      }
+                    if(obj['price']){
+                      str1 += '<span class="new">'+obj['price']+'</span>';
+                    }
+                    else{
+                      str1 += '<span class="new">面议</span>'
+                    }
+                        $('.man_list_title').append(str);
+                        $('.man_list_pic').append(str1);
+                })
+                  $(this).unbind('click');
+      })
+ 
+                })//A级详细图片列表
+
+                var id= getItem('refresh_id');
+                  
+                    $.get(serverURL+'mobile/welcome/get_images_by_pid',{pid:id},function(data){
+                         var obj = JSON.parse(data);
+                         var str2 = "";
+                         var str3 = " ";
+                         var str4 = " ";
+                         var address='http://192.168.1.113';
+                
+                for(var i in obj){
+                      if(obj[i]['iscover'] == 1 ){
+                             str2+='<a href="#man_list_cont_list">';
+                             str2+='<img class="man_list_cover" src='+address+obj[i]['url']['url'].toString()+'>';
+                             str2+='</a>';
+                          }
+                      if(obj[i]){
+                             
+                             str3+='<img src='+address+obj[i]['url']['url'].toString()+'>';
+                             str4+='<img src='+address+obj[i]['url']['url'].toString()+'>';
+                          }
+                        
+                  }
+                  $('.man_list_top').html(str2);
+                  $('.man_main').html(str3);
+                  $('.man_list_cont_list').html(str4);
+                })
+
+                  $.get(serverURL+'mobile/welcome/get_product_by_id',{pid:id},function(data){
+                  var obj = JSON.parse(data);
+                   $(".man_list_pic").html("");
+                    $(".man_list_title").html("");
+                  var str=" ";
+                  var str1=" ";
+                 
+                    if(obj['name']){
+                      str += '<span >'+obj['name']+'</span>';
+                      
+                    }
+                    if(obj['price']){
+                    
+                      str1 += '<span class="new">'+obj['price']+'</span>';
+                    }
+                    else{
+                      str1 += '<span class="new">面议</span>'
+                    }
+                  $('.man_list_title').append(str);
+                  $('.man_list_pic').append(str1);
+                })
+            });
+                 
+
+    })
+      
+    $.ui.ready(function(){
+                    $("#afui").get(0).className='bb';
+            });
+
+        function showCustomJsonSheet() {
+                            $("#afui").actionsheet(
+                            [{
+                                text: 'back',
+                                cssClasses: 'red',
+                                handler: function () {
+                                    $.ui.goBack();
+                                }
+                            }, {
+                                text: 'show alert 5',
+                                cssClasses: 'blue',
+                                handler: function () {
+                                    alert("hi");
+                                }
+                            }, {
+                                text: 'show alert 6',
+                                cssClasses: '',
+                                handler: function () {
+                                    alert("goodbye");
+                                }
+                            }]);
+                        }
+        //推荐
+        
+        $("#navbar").hide();
+              $('.home_list').bind("swipeLeft", function() {				 
+                $.ui.loadContent("#Member_Center_content_distribution", false, false, "slide");
+              });
+
+              //配送
+              $('#Member_Center_content_distribution').bind("swipeLeft", function() {
+                $.ui.loadContent("#Member_Center_content_complete", false, false, "slide");
+              })
+              
+              //完成
+              $('#Member_Center_content_complete').bind("swipeLeft", function() {
+                $.ui.loadContent("#Member_Center_content_comment", false, false, "slide");
+              });
+              $('#Member_Center_content_complete').bind("swipeRight", function() {
+                $.ui.loadContent("#Member_Center_content_distribution", false, true, "slideright");
+              });
+              //评论
+              $('#Member_Center_content_comment').bind("swipeRight", function() {
+                $.ui.loadContent("#Member_Center_content_complete", false, true, "slideright");
+              });
+			  
+			
+			  $('.showSide').bind("swipeRight", function() {
+              	 af.ui.toggleSideMenu();
+              });
+        
+              
+
+                function showPopup4() {
+                  $.ajaxSetup({ 
+                      async : false 
+                  });
+                  var str = "";
+               $.get(serverURL+'mobile_admin/mobile_login/get_province_in_china',function(data){
+                     var obj = JSON.parse(data);
+                         str+='<select>';
+                         for(var i=0;i<obj.length;i++){
+                          str += '<option value='+obj[i]['_id']+'>'+obj[i]['name']+'</option>';
+                          }
+                        str+="</select>"
+                    })
+         alert(str);
+
+                            $("#afui").popup({
+                                title: "送货地址",
+                                message: str,
+                                cancelText: "确定",
+                                doneCallback: function () {
+                                    alert("Logging in")},
+                                doneText: "取消",
+                                doneCallback: function () {},
+                                cancelOnly: false
+                            });
+                        }
+
+
+
+                 var carousel;
+      function init_carousel() {
+        carousel=$("#carousel").carousel({
+          pagingDiv: "carousel_dots",
+          pagingCssName: "carousel_paging2",
+          pagingCssNameSelected: "carousel_paging2_selected",
+          preventDefaults:false,
+          wrap:true //Set to false to disable the wrap around
+        });
+      }
+      window.addEventListener("load", init_carousel, false);
+        </script>
+	
+    </body>
+</html>
